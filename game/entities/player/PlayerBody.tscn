@@ -16,11 +16,9 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-stat_jump_force = 300.0
-stat_move_speed = 80.0
+stat_jump_force = 250.0
+stat_move_speed = 150.0
 stat_gravity_strength = 3.0
-stat_friction = 30.0
-stat_max_movespeed = 30.0
 
 [node name="icon" type="Sprite" parent="." index="0"]
 
