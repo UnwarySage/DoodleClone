@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://entities/player/PlayerBody.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/platform/Platform.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -39,7 +40,15 @@ shape = SubResource( 2 )
 
 [node name="PlayerBody" parent="." index="1" instance=ExtResource( 1 )]
 
-position = Vector2( 539.422, 226.32 )
-stat_gravity_strength = 3
+position = Vector2( 559.017, 396.65 )
+stat_friction = 5
+
+[node name="PlatformLarge" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 557.716, 474.812 )
+
+[node name="PlatformLarge2" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 631.575, 422.055 )
 
 
