@@ -24,14 +24,14 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 27.074
 
-[node name="PlayerBody" type="KinematicBody2D" index="0"]
+[node name="PlayerBody" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 6
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 stat_jump_force = 250.0
 stat_move_speed = 150.0
 stat_gravity_strength = 3.0

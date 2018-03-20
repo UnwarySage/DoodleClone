@@ -49,6 +49,6 @@ position = Vector2( 557.716, 474.812 )
 
 [node name="PlatformLarge2" parent="." index="3" instance=ExtResource( 2 )]
 
-position = Vector2( 631.575, 422.055 )
+position = Vector2( 642.458, 598.904 )
 
 
