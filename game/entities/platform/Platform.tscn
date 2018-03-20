@@ -19,7 +19,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 106, 11 )
 
-[node name="PlatformLarge" type="StaticBody2D" index="0"]
+[node name="PlatformLarge" type="StaticBody2D"]
 
 input_pickable = false
 collision_layer = 2

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entities/player/PlayerBody.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/platform/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/platform_spawner/PlatformSpawn.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -50,5 +51,9 @@ position = Vector2( 557.716, 474.812 )
 [node name="PlatformLarge2" parent="." index="3" instance=ExtResource( 2 )]
 
 position = Vector2( 642.458, 598.904 )
+
+[node name="PlatformSpawn" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 16.7371, 479.796 )
 
 
