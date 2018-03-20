@@ -20,7 +20,7 @@ __meta__ = {
 "_edit_group_": true
 }
 platform = ExtResource( 2 )
-stat_spawn_delay = 0.5
+stat_spawn_delay = 2.0
 spawn_area_width = 500
 spawn_area_margin = 60
 
