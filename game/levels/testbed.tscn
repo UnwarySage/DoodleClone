@@ -17,6 +17,7 @@ extents = Vector2( 10, 45.9695 )
 
 [node name="floor" type="StaticBody2D" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 572.789, 575.804 )
 input_pickable = false
 collision_layer = 1
