@@ -41,7 +41,6 @@ shape = SubResource( 2 )
 [node name="PlayerBody" parent="." index="1" instance=ExtResource( 1 )]
 
 position = Vector2( 559.017, 396.65 )
-stat_friction = 5
 
 [node name="PlatformLarge" parent="." index="2" instance=ExtResource( 2 )]
 
