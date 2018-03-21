@@ -42,7 +42,6 @@ position = Vector2( 511.32, 146.702 )
 [node name="PointerSprite" parent="." index="8" instance=ExtResource( 3 )]
 
 position = Vector2( 600, 300 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="PlatformSpawn" parent="PointerSprite" index="0" instance=ExtResource( 4 )]
 
