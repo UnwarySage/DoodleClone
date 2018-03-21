@@ -42,9 +42,6 @@ func _physics_process(delta):
 	velocity.x = new_facing * stat_move_speed
 	var collision = self.move_and_slide(velocity,Vector2(0,-1))
 	
-	print(self.global_position.x)
-	
-	
 	
 	
 
