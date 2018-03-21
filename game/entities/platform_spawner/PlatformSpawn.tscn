@@ -1,47 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://entities/platform_spawner/PlatformSpawn.gd" type="Script" id=1]
 [ext_resource path="res://entities/platform/Platform.tscn" type="PackedScene" id=2]
-[ext_resource path="res://entities/platform/platform2.png" type="Texture" id=3]
 
-[sub_resource type="Curve2D" id=1]
+[node name="PlatformSpawn" type="Node2D"]
 
-bake_interval = 5.0
-_data = {
-"points": PoolVector2Array(  )
-}
-_sections_unfolded = [ "Resource" ]
-
-[node name="PlatformSpawn" type="Path2D" index="0"]
-
-curve = SubResource( 1 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 platform = ExtResource( 2 )
 stat_spawn_delay = 2.0
 spawn_area_width = 600
-spawn_area_margin = 60
+spawn_area_margin = 150
 spawn_platform_shift = 250.0
 
-[node name="SpawnPoint" type="PathFollow2D" parent="." index="0"]
-
-offset = 0.0
-h_offset = 0.0
-v_offset = 0.0
-rotate = true
-cubic_interp = true
-loop = false
-lookahead = 4.0
-_sections_unfolded = [ "Transform" ]
-
-[node name="platform2" type="Sprite" parent="SpawnPoint" index="0"]
-
-position = Vector2( 5.54289, 27.8438 )
-texture = ExtResource( 3 )
-
-[node name="SpawnTimer" type="Timer" parent="." index="1"]
+[node name="SpawnTimer" type="Timer" parent="." index="0"]
 
 process_mode = 1
 wait_time = 1.0

@@ -1,4 +1,4 @@
-extends Path2D
+extends Node2D
 
 export (PackedScene) var platform
 export (float) var stat_spawn_delay
@@ -9,10 +9,6 @@ export (float) var spawn_platform_shift = 300
 
 func _ready():
 	self.global_position.x = 0
-	curve.add_point(Vector2(spawn_area_margin,0))
-	#should be a reference to screen size
-	curve.add_point(Vector2(1024-spawn_area_margin,0))
-	
 	randomize()
 	
 
@@ -27,9 +23,14 @@ func spawn_platform():
 	get_tree().get_root().add_child(spawn)
 	$SpawnTimer.wait_time = stat_spawn_delay
 	$SpawnTimer.start()
-	
 
+func spawn_row():
+	spawn_platform()
+	if(randi() % 5 == 0):
+		spawn_platform()
+		if(randi() % 5 == 0):
+			spawn_platform()
 
 
 func _on_SpawnTimer_timeout():
-	spawn_platform()
+	spawn_row()
