@@ -49,18 +49,39 @@ position = Vector2( 559.017, 396.65 )
 
 position = Vector2( 557.716, 474.812 )
 
-[node name="PlatformLarge2" parent="." index="3" instance=ExtResource( 2 )]
+[node name="PlatformLarge3" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 357.239, 262.277 )
+
+[node name="PlatformLarge2" parent="." index="4" instance=ExtResource( 2 )]
 
 position = Vector2( 642.458, 598.904 )
 
-[node name="PointerSprite" parent="." index="4" instance=ExtResource( 3 )]
+[node name="PlatformLarge4" parent="." index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 649.995, 344.163 )
+
+[node name="PlatformLarge5" parent="." index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 817.31, 170.819 )
+
+[node name="PlatformLarge6" parent="." index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 160.109, 130.121 )
+
+[node name="PlatformLarge7" parent="." index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 511.32, 146.702 )
+
+[node name="PointerSprite" parent="." index="9" instance=ExtResource( 3 )]
 
 position = Vector2( 986.973, 670.35 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PlatformSpawn" parent="PointerSprite" index="0" instance=ExtResource( 4 )]
 
-position = Vector2( -965.325, -21.1267 )
+position = Vector2( -1018.08, -349.727 )
+spawn_platform_shift = 300
 
 [node name="Camera2D" type="Camera2D" parent="PointerSprite" index="1"]
 

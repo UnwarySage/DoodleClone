@@ -21,8 +21,9 @@ __meta__ = {
 }
 platform = ExtResource( 2 )
 stat_spawn_delay = 2.0
-spawn_area_width = 500
+spawn_area_width = 600
 spawn_area_margin = 60
+spawn_platform_shift = 250.0
 
 [node name="SpawnPoint" type="PathFollow2D" parent="." index="0"]
 
@@ -31,7 +32,7 @@ h_offset = 0.0
 v_offset = 0.0
 rotate = true
 cubic_interp = true
-loop = true
+loop = false
 lookahead = 4.0
 _sections_unfolded = [ "Transform" ]
 
