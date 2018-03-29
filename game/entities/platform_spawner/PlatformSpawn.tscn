@@ -7,18 +7,8 @@
 
 script = ExtResource( 1 )
 platform = ExtResource( 2 )
-stat_spawn_delay = 2.0
 spawn_area_width = 600
 spawn_area_margin = 150
 spawn_platform_shift = 250.0
-
-[node name="SpawnTimer" type="Timer" parent="." index="0"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = true
-
-[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 
 

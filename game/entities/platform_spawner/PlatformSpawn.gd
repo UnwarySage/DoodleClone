@@ -1,11 +1,14 @@
 extends Node2D
 
 export (PackedScene) var platform
-export (float) var stat_spawn_delay
 export (int) var spawn_area_width
 export (int) var spawn_area_margin
 export (float) var spawn_platform_shift = 300
 
+var last_height = self.global_position.y
+var target_height = 0
+
+var spawn_heights = [90,100,95,150,115]
 
 func _ready():
 	self.global_position.x = 0
@@ -19,10 +22,8 @@ func spawn_platform():
 	shift.x += spawn_area_margin
 	var spawn = platform.instance()
 	spawn.global_position = Vector2(shift.x,self.global_position.y)
-	
 	get_tree().get_root().add_child(spawn)
-	$SpawnTimer.wait_time = stat_spawn_delay
-	$SpawnTimer.start()
+
 
 func spawn_row():
 	spawn_platform()
@@ -31,6 +32,9 @@ func spawn_row():
 		if(randi() % 5 == 0):
 			spawn_platform()
 
-
-func _on_SpawnTimer_timeout():
-	spawn_row()
+func _physics_process(delta):
+	if(abs(last_height-self.global_position.y) > target_height):
+		spawn_row()
+		last_height = self.global_position.y
+		print(target_height)
+		target_height = spawn_heights[randi()%spawn_heights.size()] 
